@@ -17,7 +17,7 @@ Welcome to the Super Tic-Tac-Toe project! This innovative twist on the classic T
 
 ## Demo
 
-<!-- [Live Demo](https://poulasthamukherjee.pythonanywhere.com/) -->
+[Live Demo](https://super-tic-tac-toe-poulastha.vercel.app/)
 
 ## Features
 
