@@ -35,41 +35,34 @@ export default function Rules() {
 
 function RulesText() {
   return (
-    <ul className="rulesText">
+    <ul className="rulesText space-y-4 text-lg text-gray-800 dark:text-gray-200">
       <li>
-        Each small 3 × 3 tic-tac-toe board is referred to as a local board, and
-        the larger 3 × 3 board is referred to as the global board.
+        The game consists of a <b>global board</b> (a 3x3 grid of smaller <b>local boards</b>).
       </li>
       <li>
-        The game starts with X playing wherever they want in any of the 81 empty
-        spots.
+        Players alternate turns, with <b>X</b> going first. Each player places their mark on one of the 81 available spots on the global board.
       </li>
       <li>
-        This move "sends" their opponent to its relative location on the global
-        board. For example, if X played in the top right square of their local
-        board, then O needs to play next in the local board at the top right of
-        the global board.
+        After <b>X</b> plays, <b>O</b> must play in the corresponding local board determined by the position of <b>X</b>’s move on the global board.
       </li>
       <li>
-        O can then play in any one of the nine available spots in that local
-        board, each move sending X to a different local board.
+        A player can only play in a local board that has an <b>empty spot</b>.
       </li>
       <li>
-        If a move is played so that it is to win a local board by the rules of
-        normal tic-tac-toe, then the entire local board is marked as a victory
-        for the player in the global board.
+        If a player wins a local board, that board is marked as won on the global board. The winner's mark will appear in the corresponding spot on the global board.
       </li>
       <li>
-        Once a local board is won by a player or it is filled completely, no
-        more moves may be played in that board.
+        Once a local board is filled or won, no more moves can be played there.
       </li>
       <li>
-        If a player is sent to such a board, then that player may play in any
-        other board.
+        If a player is sent to a local board that is already full or won, they may play in any other available local board.
       </li>
       <li>
-        Game play ends when either a player wins the global board or there are
-        no legal moves remaining, in which case the game is a draw.
+        <b>The game ends when either:</b>
+        <ul className="mt-2 list-inside list-disc">
+          <li>A player wins the global board by winning three local boards in a row.</li>
+          <li>All boards are filled, resulting in a draw.</li>
+        </ul>
       </li>
     </ul>
   );

@@ -10,7 +10,7 @@ export default function Header({ setStatus, welcome = false }) {
   function BackButton({ setStatus }) {
     return (
       <button className="resetButton" onClick={() => setStatus("welcomeMenu")}>
-        Home
+        <b>Home</b>
       </button>
     );
   }
