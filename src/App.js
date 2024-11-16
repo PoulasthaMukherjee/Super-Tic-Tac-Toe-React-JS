@@ -1,12 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Rules from "./rules.js";
 import Header from "./header";
 import BigBoard from "./bigBoard";
 import WelcomeMenu from "./menus/welcomeMenu.js";
 import AiMenu from "./menus/aiMenu.js";
-import NetworkMenu from "./menus/networkMenu.js";
-import HostMenu from "./menus/hostMenu.js";
-import JoinMenu from "./menus/joinMenu.js";
 
 export default function App() {
   const [reset, setReset] = useState(0);
@@ -43,17 +40,6 @@ export default function App() {
           robotMenuClick={robotMenuClick}
         />
       );
-      break;
-    case "networkMenu":
-      children.push(<NetworkMenu setStatus={statusUpdate} />);
-      break;
-    case "hostMenu":
-      children.push(
-        <HostMenu togglePlayerisX={togglePlayerisX} playerIsX={playerIsX} />
-      );
-      break;
-    case "joinMenu":
-      children.push(<JoinMenu />);
       break;
     default:
       children.push(

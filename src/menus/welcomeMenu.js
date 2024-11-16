@@ -9,15 +9,7 @@ export default function WelcomeMenu({ setStatus }) {
           }}
         >
           2 player shared screen
-        </button>
-        <button
-          className="resetButton"
-          onClick={() => {
-            setStatus("networkMenu");
-          }}
-        >
-          2 player online
-        </button>
+        </button><br />
         <button
           className="resetButton"
           onClick={() => {
